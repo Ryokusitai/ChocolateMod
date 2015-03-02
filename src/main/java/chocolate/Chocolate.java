@@ -6,12 +6,12 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import eremc.EREMC;
 import eremc.EmcHandler;
 
-@Mod(modid = Chocolate.MODID, name =  Chocolate.MODNAME, version =  Chocolate.VERSION, dependencies="")
+@Mod(modid = Chocolate.MODID, name =  Chocolate.MODNAME, version =  Chocolate.VERSION)
 public class Chocolate
 {
 
-	public static final String MODID = "Chocolate";
-	public static final String MODNAME = "Chocolate";
+	public static final String MODID = "ChocolateMod";
+	public static final String MODNAME = "ChocolateMod";
 	public static final String VERSION = "@VERSION@";
 
 	@EventHandler

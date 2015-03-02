@@ -13,6 +13,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.item.crafting.ShapedRecipes;
+import net.minecraft.potion.Potion;
 import peaa.gameObjs.ObjHandlerPEAA;
 import peaa.utils.RecipeCheck;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -23,8 +24,9 @@ public class ObjHandlerChoco
 			.setUnlocalizedName("CookieDough").setTextureName("chocolate:dough");
 	public static Item chocolateBucket = new Item().setCreativeTab(CreativeTabs.tabMisc)
 			.setUnlocalizedName("ChocolateBucket").setTextureName("chocolate:chocolateBucket").setMaxStackSize(1);
-	public static Item chocolateBar = new ItemFood(2, false).setAlwaysEdible().setCreativeTab(CreativeTabs.tabFood)	// 板チョコ
-			.setUnlocalizedName("ChocolateBar").setTextureName("chocolate:chocolateBar");
+	// 移動速度アップ付与(lv 1, 10秒)
+	public static Item chocolateBar = new ItemFood(2, false).setAlwaysEdible().setPotionEffect(Potion.moveSpeed.id, 10, 0, 1.0F)
+			.setCreativeTab(CreativeTabs.tabFood).setUnlocalizedName("ChocolateBar").setTextureName("chocolate:chocolateBar");
 	public static Item hotChocolate = new ItemHotChocolate();
 
 	public static void register()
